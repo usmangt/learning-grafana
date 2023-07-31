@@ -71,7 +71,7 @@ Grafana OSS is avaialbe in 2 types of releases:
      1. OSS Stable (stable-branch)
      2. Nightly Builds (dev-branch)
 
-Use the OSS Stable release as it is more stable and contains all the information in the release notes.
+Use the OSS stable release as it is more stable and contains all the information in the release notes.
 
 ## 3. Installation via the official repository
 
