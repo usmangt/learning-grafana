@@ -163,6 +163,7 @@ yum install grafana
 1. The Grafana sign-in page appears.
 
 1. To sign in to Grafana, enter `admin` for both the username and password.
+   > **Note:**  Login as `admin` (which is pre-configured) means that you logged in as a super administrator account who has all access to the server.
 
 # Troubleshooting
 
