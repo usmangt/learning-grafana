@@ -183,9 +183,7 @@ The following example output determines that an endpoint has been located.
 <a href="/login">Found</a>
 ```
 
-> **Note:**  If you encounter problems in accessing the WebUI then please check the logs for troubleshooting. The default location is `/var/log/grafana/grafana.log`.
-> 
-> Also make sure that the port `3000` is not blocked by a Firewall.
+> **Note:**  If you encounter problems in accessing the Grafana server endpoint via the `curl` command then make sure that the port `3000` is not blocked by a Firewall.
 
 ## Checking log file
 
