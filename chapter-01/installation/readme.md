@@ -186,7 +186,7 @@ The following example output determines that an endpoint has been located.
 
 ## Checking log file
 
-1. The default location of grafana log file is `(/var/log/grafana)` directory.
+1. On Linux O.S. the default location of grafana log file is under the `(/var/log/grafana)` directory.
    
    ```bash
    cd /var/log/grafana
