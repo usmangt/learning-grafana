@@ -158,7 +158,7 @@ yum install grafana
 
 ## Login via Web UI
 
-1. To access the Grafana UI on the web browser, type the IP along with the port `3000`. For example: ```192.168.122.144:3000```
+1. To access the Grafana UI on the web browser, type the IP along with the port `3000`. For example: `192.168.122.144:3000` or if you are using it directly on the host machine then use `localhost:3000`
 
 1. The Grafana sign-in page appears.
 
@@ -169,6 +169,8 @@ yum install grafana
 ## Verifying via cURL
 
 Run a curl command to verify whether a given connection should be working in a browser under ideal circumstances.
+
+Example:
 
 ```bash
 curl 192.168.122.144:3000
@@ -186,7 +188,7 @@ The following example output determines that an endpoint has been located.
 
 ## Checking log file
 
-1. On Linux O.S. the default location of grafana log file is under the `(/var/log/grafana)` directory.
+1. On Linux O.S. the default location of the Grafana log file is under the `(/var/log/grafana)` directory.
    
    ```bash
    cd /var/log/grafana
