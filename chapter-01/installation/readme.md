@@ -56,11 +56,11 @@ Always use the latest and stable versions of the following:
 
 # Installation
 
-## 1. Update your machine
+## 1. Update the machine
 
 For e.g.
 
-- On **RPM** based distro. `dnf update`
+- On **RPM** based distro. `dnf update` (if `dnf` command is not available then use `yum update`)
 
 - On **Debian** based disto. `sudo apt-get update`
 
@@ -91,7 +91,7 @@ Use the OSS Stable release as it is more stable and contains all the information
 
 ### Creating the repository on the machine
 
-1. Create a new file:
+1. Create a new file e.g. `grafana.repo` in the `(/etc/yum.repos.d/)` directory :
 
     ```bash
     touch /etc/yum.repos.d/grafana.repo
@@ -164,6 +164,8 @@ yum install grafana
 
 1. To sign in to Grafana, enter `admin` for both the username and password.
 
+# Troubleshooting
+
 ## Verifying via cURL
 
 Run a curl command to verify whether a given connection should be working in a browser under ideal circumstances.
@@ -181,3 +183,18 @@ The following example output determines that an endpoint has been located.
 > **Note:**  If you encounter problems in accessing the WebUI then please check the logs for troubleshooting. The default location is `/var/log/grafana/grafana.log`.
 > 
 > Also make sure that the port `3000` is not blocked by a Firewall.
+
+## Checking log file
+
+1. The default location of grafana log file is `(/var/log/grafana)` directory.
+   
+   ```bash
+   cd /var/log/grafana
+   ```
+
+1. Inside there you will find the `grafana.log` file which contains all the logs when having issues e.g. failed to startup or unexpected crash etc. To view it use the command:
+
+   ```bash
+   less grafana.log
+   ```
+   
