@@ -78,6 +78,7 @@ Use the OSS stable release as it is more stable and contains all the information
 ### Getting the GPG Key
 
 1. Download the GPG key:
+   
    Use the `wget` command to download the official GPG key file
 
     ```bash
@@ -85,6 +86,7 @@ Use the OSS stable release as it is more stable and contains all the information
     ```
 
 1. Import the key:
+   
    Use the rpm command to import the `gpg.key` file
 
     ```bash
