@@ -66,10 +66,10 @@ For e.g.
 
 ## 2. Choosing the correct version release
 
-Grafana OSS is avaialbe in 2 types of [releases](https://grafana.com/grafana/download/10.1.0-125833pre?edition=oss):
+Grafana OSS is avaialbe in 2 types of [releases](https://grafana.com/grafana/download?edition=oss):
 
-     1. OSS Stable (stable-branch)
-     2. Nightly Builds (dev-branch)
+     1. OSS Stable (stable-branch) (available as default)
+     2. Nightly Builds (dev-branch) (for testing an upcoming release)
 
 Use the OSS stable release as it is more stable and contains all the information in the release notes.
 
@@ -101,7 +101,7 @@ Use the OSS stable release as it is more stable and contains all the information
     touch /etc/yum.repos.d/grafana.repo
     ```
 
-2. Paste the following lines into `grafana.repo` file (you can use your favourite editor e.g. vi, nano, etc):
+2. Paste the following lines into `grafana.repo` file (you can use your favourite editor e.g. vi, vim, nano, etc):
 
     ```bash
     [grafana]
