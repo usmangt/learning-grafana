@@ -66,7 +66,7 @@ For e.g.
 
 ## 2. Choosing the correct version release
 
-Grafana OSS is avaialbe in 2 types of releases:
+Grafana OSS is avaialbe in 2 types of [releases](https://grafana.com/grafana/download/10.1.0-125833pre?edition=oss):
 
      1. OSS Stable (stable-branch)
      2. Nightly Builds (dev-branch)
@@ -101,7 +101,7 @@ Use the OSS stable release as it is more stable and contains all the information
     touch /etc/yum.repos.d/grafana.repo
     ```
 
-2. Paste the following lines into `grafana.repo` file:
+2. Paste the following lines into `grafana.repo` file (you can use your favourite editor e.g. vi, nano, etc):
 
     ```bash
     [grafana]
@@ -125,6 +125,7 @@ Run the following command to download and install the Grafana package:
 ```bash
 yum install grafana
 ```
+You may get asked to accept a key, press **y** and continue.
 
 > **Note:**  If you are using RHEL/CentOS 8 or higher then use the `dnf` command instead of `yum`.
 
@@ -132,17 +133,11 @@ yum install grafana
 
 1. To start the Grafana service so that be able to use it, run the command:
 
-<!---
- sudo /bin/systemctl daemon-reload
- sudo /bin/systemctl enable grafana-server.service
-### You can start grafana-server by executing
- sudo /bin/systemctl start grafana-server.service
--->
-
-
     ```bash
     systemctl start grafana-server
     ```
+    
+    > **Note:** In case the above command does not work then run `systemctl daemon-reload` and then retry the above command.
 
 1. Check the status if it is active or not via command:
 
