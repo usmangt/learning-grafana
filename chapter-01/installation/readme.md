@@ -132,6 +132,14 @@ yum install grafana
 
 1. To start the Grafana service so that be able to use it, run the command:
 
+<!---
+ sudo /bin/systemctl daemon-reload
+ sudo /bin/systemctl enable grafana-server.service
+### You can start grafana-server by executing
+ sudo /bin/systemctl start grafana-server.service
+-->
+
+
     ```bash
     systemctl start grafana-server
     ```
