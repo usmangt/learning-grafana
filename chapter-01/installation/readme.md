@@ -101,7 +101,7 @@ Use the OSS stable release as it is more stable and contains all the information
     touch /etc/yum.repos.d/grafana.repo
     ```
 
-2. Paste the following lines to it:
+2. Paste the following lines into `grafana.repo` file:
 
     ```bash
     [grafana]
