@@ -62,7 +62,7 @@ For e.g.
 
 - On **RPM** based distro. `dnf update` (if `dnf` command is not available then use `yum update`)
 
-- On **Debian** based disto. `sudo apt-get update`
+- On **Debian** based distro. `sudo apt-get update`
 
 ## 2. Choosing the correct version release
 
