@@ -153,7 +153,7 @@ You may get asked to accept a key, press **y** and continue.
     Active: active (running) since Fri 2023-07-28 11:38:15 CEST; 6s ago
     ```
 
-    Here it does states that the service is `active (running)` which confirms that we can now access Grafana.
+    Here it does states that the service is `active (running)` which confirms that Grafana is now accessible.
 
 1. Enable the Grafana service to load automatically when the system boots:
 
