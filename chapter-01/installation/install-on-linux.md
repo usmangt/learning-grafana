@@ -87,7 +87,7 @@ Use the OSS stable release as it is more stable and contains all the information
 
 1. Import the key:
    
-   Use the rpm command to import the `gpg.key` file
+   Use the `rpm` command to import the `gpg.key` file
 
     ```bash
     rpm --import gpg.key
