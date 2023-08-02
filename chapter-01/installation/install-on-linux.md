@@ -68,7 +68,7 @@ For e.g.
 
 Grafana OSS is avaialbe in 2 types of [releases](https://grafana.com/grafana/download?edition=oss):
 
-     1. OSS Stable (stable-branch) (available as default)
+     1. OSS Stable (stable-branch) (available as **default**)
      2. Nightly Builds (dev-branch) (for testing an upcoming release)
 
 Use the OSS stable release as it is more stable and contains all the information in the release notes.
