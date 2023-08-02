@@ -129,7 +129,7 @@ You may get asked to accept a key, press **y** and continue.
 
 > **Note:**  If you are using RHEL/CentOS 8 or higher then use the `dnf` command instead of `yum`.
 
-# Configuring System services
+# Configuring system services
 
 1. To start the Grafana service so that be able to use it, run the command:
 
