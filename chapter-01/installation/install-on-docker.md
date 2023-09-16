@@ -21,7 +21,7 @@ The recommended minimum disk space is 20 GB. However, the more the better, depen
 ### 2 - Installing Docker Engine on CentOS
 
 #### Prerequisites
-##### OS requirements
+##### 1- OS requirements
 To install Docker Engine, you need a maintained version of one of the following CentOS versions:
 
 - CentOS 7
@@ -29,6 +29,29 @@ To install Docker Engine, you need a maintained version of one of the following 
 - CentOS 9 (stream)
 
 NOTE: The centos-extras repository must be enabled. This repository is enabled by default, but if you have disabled it, you need to re-enable it
+
+##### 2- Uninstall any old/obsolete/unstable versions 
+
+Older versions of Docker went by the names of docker or docker-engine. Uninstall any such older versions before attempting to install a new version, along with associated dependencies. To do this, login as root user (or can use `sudo` command) and then run:
+
+`$ yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine`
+
+
+##### 3- Install Docker Engine using the rpm repository
+
+Install the yum-utils package (which provides the yum-config-manager utility) and set up the repository.
+
+
+`yum install -y yum-utils`
+`yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo`
+
 
 
 ## Part 2 - Install Grafana using Docker
