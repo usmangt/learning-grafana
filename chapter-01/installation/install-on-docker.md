@@ -1,18 +1,21 @@
-# Grafana Installation on Docker
+# Grafana Installation on Docker (Linux)
 
 ## Part 1 - Installing Docker
 
 ### 1 - System Requriements
 
 - Operating System:
-Docker Engine supports a wide range of Linux distributions such as Ubuntu, Debian, CentOS, Fedora, and RHEL etc. Please make sure your Linux distribution is officially supported by Docker by using the following link.
+Docker Engine supports a wide range of Linux distributions such as Ubuntu, Debian, CentOS, Fedora, and RHEL etc. Please make sure your Linux distribution is officially supported by Docker by using the following link. You can find the distrubtion detail by using the command:
+`cat /etc/os-release`
 - Architecture:
-Docker supports x86_64 (64-bit), armhf (32-bit ARM), and arm64 (64-bit ARM) architectures. Ensure that your system’s architecture is compatible.
+Docker supports x86_64 (64-bit), armhf (32-bit ARM), and arm64 (64-bit ARM) architectures. Ensure that your system’s architecture is compatible. You can check your kernel version by running the command:
+`lscpu`
 - Kernel-Version:
 Docker requires a Linux kernel version of 3.10 or higher. You can check your kernel version by running the command:
 `uname -r`
 - CPU:
-Docker typically works well with modern CPUs. However, virtualization extensions (e.g., Intel VT-x or AMD-V) need to be enabled in the BIOS/UEFI firmware for optimal performance.
+Docker typically works well with modern CPUs. However, virtualization extensions (e.g., Intel VT-x or AMD-V) need to be enabled in the BIOS/UEFI firmware for optimal performance. You can check your kernel version by running the command:
+`lscpu`
 - RAM:
 At least a minimum of 2 GB of RAM for the host system. However, the more the better depending on your use case and the number of containers you plan to run.
 - Disk Space:
