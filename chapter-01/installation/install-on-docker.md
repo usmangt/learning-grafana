@@ -64,7 +64,7 @@ We will be using the Linux CentOS distribution to install Docker. If you are usi
 To install Docker Engine, you need a maintained version of one of the following CentOS versions:
 
 
-|  Version      	|  Command to use for update |
+|  Version      	|  Command to use for installing packages |
 |-------------------|----------------------------|
 |CentOS 7          | `yum`            			 |
 |CentOS 8 (stream) | `dnf`            			 |
