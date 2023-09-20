@@ -57,7 +57,7 @@
 ### 2 - Installing Docker Engine on CentOS
 
 #### Prerequisites
-We will be using the Linux CentOS distribution to install Docker. If you are using any other Linux Distribution e.g. Debian, SLES, etc. then please follow this [link](https://docs.docker.com/engine/install/#server) to their respective documentation.
+We will be using the Linux **CentOS** distribution to install Docker. If you are using any other Linux Distribution e.g. Debian, SLES, etc. then please follow this [link](https://docs.docker.com/engine/install/#server) to their respective documentation.
 
 #### 1- OS requirements
 
@@ -162,7 +162,7 @@ yum remove docker-ce \
   containerd.io \
   docker-buildx-plugin \
   docker-compose-plugin \
-  docker-ce-rootless-extras \
+  docker-ce-rootless-extras
 ```
 
 2. Remove local data
