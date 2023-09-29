@@ -190,5 +190,5 @@ rm -rf /var/lib/containerd
 
 
 
-## Part 2 - Install Grafana using Docker
+## Part 2 - How to use Grafana with Docker
 Coming Soon
