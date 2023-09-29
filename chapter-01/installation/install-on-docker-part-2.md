@@ -6,8 +6,12 @@
 ### 1 - System Requriements
 
 - Docker Server:
-    Make sure that docker server is up and running
+  
+    Make sure that the docker server is up and running
 
 - Port 3306 open
   
     Make sure port 3306 is open
+
+
+##ä 2 - Using the Docker image from the hb
