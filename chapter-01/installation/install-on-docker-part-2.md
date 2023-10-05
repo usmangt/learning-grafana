@@ -130,7 +130,7 @@ docker stop grafana
       grafana_data: {}
     ```
 
-Save the changes in the file.
+    Save the changes in the file.
 
 
 4. Now run the `docker compose` command:
