@@ -163,7 +163,7 @@ docker ps
 
 ## 5 Troubleshooting
 
-### Deleting the previously exited container image
+### 1. Deleting the previously exited container image
 
 To delete a previously used image even after stopping the container, run the following command to the list only of the exited container:
 
@@ -178,7 +178,7 @@ docker rm <IMAGE NAME>
 ```
 
 
-### Checking logs
+### 2. Checking logs
 
 Use the docker logs command to investigate the logs:
 
