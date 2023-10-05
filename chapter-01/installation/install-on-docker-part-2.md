@@ -14,4 +14,9 @@
     Make sure port 3306 is open
 
 
-##ä 2 - Using the Docker image from the hb
+### 2 - Using the Docker image from the hub
+
+[root@centos7 ~]# docker search grafana-oss
+
+
+
