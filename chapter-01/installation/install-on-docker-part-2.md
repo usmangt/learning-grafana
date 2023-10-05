@@ -83,10 +83,10 @@ docker run -d -p 3000:3000 --name grafana  --volume grafana-storage:/var/lib/gra
    docker ps
    ```
 
-2. Login to the WebUI by using the admin as both username and password
+2. Login to the WebUI by using the **admin** as both username and password
 
 
-### 4, Stop the container
+### 4. Stop the container
 
 Use the following command to stop the container:
 
@@ -98,18 +98,22 @@ docker stop grafana
 
 ## 5 Using the docker compose command
 
-
+1. First we verify if the docker compose plugin is availalbe by running the command:
 
 ```sh
 docker compose version
 ```
 
+>📌 **NOTE:** Incase if it is not available on your machine then you can follow this tutorial [link](https://github.com/usmangt/learning-grafana/blob/master/chapter-01/installation/install-on-docker-part-1.md#4--install-docker-engine), where I have explained as how to install it.
+
+
+2. Now we create a file named `docker-compose.yaml`
 
 ```sh
 vim docker-compose.yaml
 ```
 
-
+3. Add the following YAML code into it.
 
 ```yaml
 version: '3.8'
@@ -125,6 +129,9 @@ services:
 volumes:
   grafana_data: {}
 ```
+
+Save it and exit 
+
 
 ```sh
 docker compose up -d
