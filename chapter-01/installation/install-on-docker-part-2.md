@@ -64,8 +64,17 @@ It is recommended to have persistent storage because, without it, all data will 
 This is the command syntax:
 
 ```sh
-docker run -d -p 3000:3000 --name grafana grafana/grafana-oss:<version number>
+docker run -d -p 3000:3000 --name grafana --volume grafana-storage grafana/grafana-oss:<version number>
 ```
+
+where;
+      
+|  Parameters      	|  Description |
+|-------------------|---------------|
+|`-d` | running docker in detached mode |
+|`-p` | assigning port number  |
+|`--name` | giving container a logical name |
+|`--volume` | path to persistent volume to store data |
 
 Run the above command with the desired version i.e. to run the latest version
 
@@ -98,7 +107,7 @@ docker stop grafana
 
 ## 5 Using the docker compose command
 
-1. First we verify if the docker compose plugin is availalbe by running the command:
+1. First we verify if the `docker compose` plugin is available by running the command:
 
     ```sh
     docker compose version
@@ -112,6 +121,8 @@ docker stop grafana
     ```sh
     vim docker-compose.yaml
     ```
+    >ℹ️ **TIP:** You can use any other editor of your choice.
+
 
 3. Add the following YAML code into it.
 
