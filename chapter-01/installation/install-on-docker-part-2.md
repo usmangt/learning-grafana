@@ -7,7 +7,7 @@
 
 - Services up and running:
   
-    Ensure the **docker** server and other dependent services such as **contained** are up and running.
+    Ensure the **docker** server and other dependent services such as **containerd** are up and running.
 
 - Port **3306** is open
   
