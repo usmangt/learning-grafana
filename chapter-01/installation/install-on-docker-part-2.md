@@ -3,7 +3,7 @@
 ## Part 2 - How to Use Grafana with Docker
 
 
-## 1 - System Requriements
+## 1 - Pre-requisites
 
 - Docker Server:
   
