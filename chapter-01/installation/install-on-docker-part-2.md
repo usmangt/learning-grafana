@@ -74,7 +74,7 @@ where;
 |`-d` | running docker in detached mode |
 |`-p` | assigning port number  |
 |`--name` | giving container a logical name |
-|`--volume` | path to persistent volume to store data |
+|`--volume` | defining volume to be mounted for storing data |
 
 Run the above command with the desired version i.e. to run the latest version
 
@@ -142,6 +142,8 @@ docker stop grafana
     ```
 
     Save the changes in the file.
+
+ >ℹ️ **INFO:** Read more about Compose version 3.8 [compatibility matrix](https://docs.docker.com/compose/compose-file/compose-file-v3/).
 
 
 4. Now run the `docker compose` command:
