@@ -214,12 +214,11 @@ Deploy the Nginx on your K3s cluster:
 kubectl apply -f nginx.yaml
 ```
 
-The expected output is similar to:
-
-```bash
-deployment.apps/nginx created
-service/nginx created
-```
+> The expected output is similar to:
+> ```bash
+> deployment.apps/nginx created
+> service/nginx created
+> ```
 
 Also, verify that the pods are running:
 
@@ -233,12 +232,11 @@ Check the deployment if it is ready:
 kubectl get deployments
 ```
 
-The expected output is similar to:
-
-```bash
-NAME    READY   UP-TO-DATE   AVAILABLE   AGE
-nginx   1/1     1            1           57s
-```
+> The expected output is similar to:
+> ```bash
+> NAME    READY   UP-TO-DATE   AVAILABLE   AGE
+> nginx   1/1     1            1           57s
+> ```
 
 ## Step 3 - Accessing the Service
 
@@ -247,12 +245,11 @@ Verify that the load balancer service is running:
 ```bash
 kubectl get services nginx
 ```
-The expected output is similar to:
-
-```bash
-NAME       TYPE           CLUSTER-IP    EXTERNAL-IP       PORT(S)          AGE
-nginx      LoadBalancer   10.0.0.89     192.0.2.1         8081:31809/TCP   33m
-```
+> The expected output is similar to:
+> ```bash
+> NAME       TYPE           CLUSTER-IP    EXTERNAL-IP       PORT(S)          AGE
+> nginx      LoadBalancer   10.0.0.89     192.0.2.1         8081:31809/TCP   33m
+> ```
 
 In a web browser navigation bar, type the IP address listed under `EXTERNAL_IP` from your output and append the port number:`8081` to reach the default NGINX welcome page.
 
