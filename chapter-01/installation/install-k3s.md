@@ -134,7 +134,6 @@ curl -sfL https://get.k3s.io | sh
 ```
 ## Step 5 - Verifying K3s Service
 
-
 Let's review the service in detail:
 
 ```bash
@@ -147,19 +146,22 @@ Also, let's see the current status of the service:
 systemctl status k3s
 ```
 
-```bash
-kubectl get nodes
-```
-# all pods in running state? fine!
+# Working on K3s
+
+Let's test out our K3s deployment using the basic commands:
+
 ```bash
 kubectl get pods --all-namespaces
 ```
+It will show all the Pods.
+
+This means that our K3s cluster is running fine
 
 
+# Testing K3s
+Let's deploy a Nginx server on our K3s cluster.
 
-# Test K3s
-Here, you will test your K3s cluster with a simple NGINX website deployment.
-
+## Step 1 - Creating the deployment file
 
 File: `nginx.yaml`
 
@@ -202,28 +204,30 @@ spec:
   type: LoadBalancer
 ```
 
-
-
 Save and close the `nginx.yaml` file.
 
-Deploy the NGINX website on your K3s cluster:
+## Step 2 - Deploying the file
+
+Deploy the Nginx on your K3s cluster:
 
 ```bash
-kubectl apply -f ./nginx.yaml
+kubectl apply -f nginx.yaml
 ```
 
 The expected output is similar to:
 
+```bash
 deployment.apps/nginx created
 service/nginx created
+```
 
-Verify that the pods are running:
+Also, verify that the pods are running:
 
 ```bash
 kubectl get pods
 ```
 
-Verify that your deployment is ready:
+Check the deployment if it is ready:
 
 ```bash
 kubectl get deployments
@@ -235,6 +239,8 @@ The expected output is similar to:
 NAME    READY   UP-TO-DATE   AVAILABLE   AGE
 nginx   1/1     1            1           57s
 ```
+
+## Step 3 - Accessing the Service
 
 Verify that the load balancer service is running:
 
@@ -250,8 +256,10 @@ nginx      LoadBalancer   10.0.0.89     192.0.2.1         8081:31809/TCP   33m
 
 In a web browser navigation bar, type the IP address listed under `EXTERNAL_IP` from your output and append the port number:`8081` to reach the default NGINX welcome page.
 
-Delete your test NGINX deployment:
+## Step 4 - Deleting the Deployment
+
+To delete your test Nginx deployment, run the command:
 
 ```bash
-kubectl delete -f ./nginx.yaml
+kubectl delete -f nginx.yaml
 ```
