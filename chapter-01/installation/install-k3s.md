@@ -101,7 +101,7 @@ First, let's disable the Firewall service.
 ``bash
 systemctl stop firewalld
 systemctl disable firewalls
-``
+```
 
 Now, let's disable the SELinux configuration.
 
