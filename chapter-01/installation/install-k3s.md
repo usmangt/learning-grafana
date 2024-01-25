@@ -1,6 +1,8 @@
-# Setting up K3s on CentOS Virtual Machine
+![Image](https://github.com/usmangt/learning-grafana/assets/69509548/3b921541-4376-4872-840f-d6dbbe8a51e6)
 
-This guide is about how to setup and deploy a K3s Kubernetes cluster which will be running on a Virtual machine.
+# Setting up K3s on a Linux Virtual Machine
+
+This guide is about how to setup and deploy a K3s Kubernetes cluster which will be running on Linux Virtual machine.
 
 
 # Introduction
@@ -30,10 +32,7 @@ K3s offers several advantages over other Kubernetes distributions like Minikube 
 
 - **Security and Simplicity**: k3s prioritizes security and simplicity. It removes or replaces certain components that are not essential for most use cases, reducing the attack surface and making the cluster more secure. Additionally, k3s provides a simplified and opinionated approach to Kubernetes, making it easier for users to adopt and manage.
 
-
-# Installation
-
-## Minimum Requirements
+# Minimum Requirements
 
 These are the Minimal system requirements to setup and deploy a single node k3s on any machine.
 
@@ -48,7 +47,7 @@ k3s is available for the following architectures:
 
 **2. Operating Systems**
 
-kK3s is expected to work on most modern Linux systems.
+K3s is expected to work on most modern Linux systems.
 
 **3. Minimum Hardware requirements**
 
@@ -65,17 +64,24 @@ The K3s server needs port 6443 to be accessible by all nodes.
 
 For detailed installation, refer to the official [docs](https://docs.k3s.io/).
 
-## Pre-requisite
+# Installation
 
-You will need to disable the SWAP Disk space on your machine.
+### Pre-requisite
 
-## For CentOS
+> 📌 You will need to disable the SWAP Disk space on your machine. That means on very basic level only need Boot and Root partiton.
+>
+> You can check my video where I have explained as how to create custom partitions while installing Linux.
+
+## Step 1 - Setting up the Linux OS
+
+We will be using CentOS as our primary O.S. for this guide. You can use any other Linux distribution of your choice as the steps will be the same.
+
+For **CentOS** first update the system using the command:
 
 ```bash
 dnf -y upgrade
 ```
-
-reboot if necessary
+Reboot the machine if required. 
 
 ```bash
 dnf -y install epel-release
