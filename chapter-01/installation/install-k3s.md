@@ -98,7 +98,7 @@ Since we are not deploying our machine in a real production environment, therefo
 
 First, let's disable the Firewall service.
   
-``bash
+```bash
 systemctl stop firewalld
 systemctl disable firewalls
 ```
