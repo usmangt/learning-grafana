@@ -60,7 +60,7 @@ Minimum recommendations are outlined here.
 
 **4. Networking**
 
-The K3s server needs port 6443 to be accessible by all nodes.
+The K3s server needs port `6443` to be accessible by all nodes.
 
 For detailed installation, refer to the official [docs](https://docs.k3s.io/).
 
@@ -68,9 +68,9 @@ For detailed installation, refer to the official [docs](https://docs.k3s.io/).
 
 ### Pre-requisite
 
-> 📌 You will need to disable the SWAP Disk space on your machine. That means on very basic level only need Boot and Root partiton.
+> 📌 You will need to disable the SWAP Disk space on your machine. That means, on a very basic level we only need a Boot and the Root partition.
 >
-> You can check my video where I have explained as how to create custom partitions while installing Linux.
+> You can check my [video](https://www.youtube.com/watch?v=APZ5FDpxNVY) where I explained on how to create custom partitions while installing Linux.
 
 ## Step 1 - Setting up the Linux OS
 
@@ -81,51 +81,67 @@ For **CentOS** first update the system using the command:
 ```bash
 dnf -y upgrade
 ```
-Reboot the machine if required. 
+For **CentOS 7**, just replace the above `dnf` command with `yum`.
+
+📌 Reboot the machine if required. 
+
+After that, we install the `epel-release` package to get more up-to-date packages.
 
 ```bash
 dnf -y install epel-release
 dnf -y update
 ```
-Now, install the required packages:
+
+## Step 2 - Disable Firewall and SELinux
+
+Since we are not deploying our machine in a real production environment, therefore we can simply disable the Linux Firewall and SELinux services to avoid issues that may arrive later.
+
+First, let's disable the Firewall service.
+  
+``bash
+systemctl stop firewalld
+systemctl disable firewalls
+``
+
+Now, let's disable the SELinux configuration.
+
+Open the following file `/etc/selinux/config` in your favorite editor:
+
+Set the value for `SELINUX`
+
+`SELINUX=disabled`
+
+Save and exit
+
+## Step 3 - Install the required packages
+
+Set a valid `hostname` inside the file `/etc/hosts`
+
+Now reboot the machine so that the above changes take effect.
+
+## Step 4 - Install the required packages
+
+Install the following packages which are required for the K3s installation.
 
 ```bash
 dnf -y install setroubleshoot-server curl lsof wget tar epel-release vim
 ```
-
-For **CentOS 7**, just replace the above `dnf` command with `yum`.
-
-
-```bash
-systemctl stop firewalld
-systemctl disable firewalls
-```
-
-
-```bash
-vim /etc/selinux/config 
-```
-
-Set,
-
-`SELINUX=disabled`
-
-Set a valid `hostname` inside the file `/etc/hosts`
-
-reboot it again
 
 Now run the K3s installer script:
 
 ```bash
 curl -sfL https://get.k3s.io | sh
 ```
+## Step 5 - Verifying K3s Service
 
-Lets review the service in detail
+
+Let's review the service in detail:
+
 ```bash
 cat /etc/systemd/system/k3s.service
 ```
 
-Also, lets see the current status:
+Also, let's see the current status of the service:
 
 ```bash
 systemctl status k3s
