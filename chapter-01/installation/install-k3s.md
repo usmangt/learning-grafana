@@ -1,24 +1,24 @@
-# Setting up k3s on CentOS Virtual Machine
+# Setting up K3s on CentOS Virtual Machine
 
 This guide is about how to setup and deploy a K3s Kubernetes cluster which will be running on a Virtual machine.
 
 
 # Introduction
 
-[k3s](https://k3s.io/) is a lightweight Kubernetes distribution designed for resource-constrained environments, such as edge devices, IoT devices, and small clusters.  It is a highly optimized version of Kubernetes that aims to reduce the memory and CPU footprint while maintaining full compatibility with the Kubernetes API.
+[K3s](https://k3s.io/) is a lightweight Kubernetes distribution designed for resource-constrained environments, such as edge devices, IoT devices, and small clusters.  It is a highly optimized version of Kubernetes that aims to reduce the memory and CPU footprint while maintaining full compatibility with the Kubernetes API.
 
 It was originally developed by [Rancher(Suse)](https://www.rancher.com/)
 
 ![image](https://github.com/usmangt/learning-grafana/assets/69509548/9e859578-889d-4b6c-8073-b5ab1ce18c40)
 
 
-k3s is a now CNCF [Sandbox Project](https://www.cncf.io/)
+K3s is a now CNCF [Sandbox Project](https://www.cncf.io/).
 
 ![image](https://github.com/usmangt/learning-grafana/assets/69509548/030f2118-6bb1-48ef-a6bf-c18c29094deb)
 
 ## Advantages
 
-k3s offers several advantages over other Kubernetes distributions like Minikube and kinD etc:
+K3s offers several advantages over other Kubernetes distributions like Minikube and kinD etc:
 
 - **Lightweight and Resource-Efficient**: k3s is designed to be lightweight and optimized for resource-constrained environments. It has a smaller memory and CPU footprint compared to other Kubernetes distributions, making it suitable for running on edge devices, IoT devices, and small clusters.
 
@@ -31,14 +31,13 @@ k3s offers several advantages over other Kubernetes distributions like Minikube 
 - **Security and Simplicity**: k3s prioritizes security and simplicity. It removes or replaces certain components that are not essential for most use cases, reducing the attack surface and making the cluster more secure. Additionally, k3s provides a simplified and opinionated approach to Kubernetes, making it easier for users to adopt and manage.
 
 
-
 # Installation
 
-## Requirements
+## Minimum Requirements
 
 These are the Minimal system requirements to setup and deploy a single node k3s on any machine.
 
-1- Architecture
+**1. Architecture**
 
 k3s is available for the following architectures:
 
@@ -47,12 +46,28 @@ k3s is available for the following architectures:
 - arm64/aarch64
 - s390x
 
-2- Operating Systems
+**2. Operating Systems**
 
 kK3s is expected to work on most modern Linux systems.
 
+**3. Minimum Hardware requirements**
+
+Minimum recommendations are outlined here.
+
+|Spec           |Minimum	  | Recommended |             
+|---------------|-----------|-------------|
+|CPU            |1 core            |2 cores |
+|RAM            |512 MB            |1 GB |
+
+**4. Networking**
+
+The K3s server needs port 6443 to be accessible by all nodes.
 
 For detailed installation, refer to the official [docs](https://docs.k3s.io/).
+
+## Pre-requisite
+
+You will need to disable the SWAP Disk space on your machine.
 
 ## For CentOS
 
