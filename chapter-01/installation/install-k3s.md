@@ -6,6 +6,15 @@ This guide is about how to setup and deploy a K3s Kubernetes cluster which will 
 
 For a more detailed guide, please view my blog post by using this link.
 
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=jocy_i6pyrs">
+     <img 
+      src="https://img.youtube.com/vi/jocy_i6pyrs/0.jpg" 
+      alt="Everything Is AWESOME" 
+      style="width:100%;">
+      </a>
+    </div>
+
 # Introduction
 
 [K3s](https://k3s.io/) is a lightweight Kubernetes distribution designed for resource-constrained environments, such as edge devices, IoT devices, and small clusters.  It is a highly optimized version of Kubernetes that aims to reduce the memory and CPU footprint while maintaining full compatibility with the Kubernetes API.
